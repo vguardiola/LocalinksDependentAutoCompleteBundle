@@ -1,0 +1,54 @@
+
+{% extends 'SonataAdminBundle:Form/Type:sonata_type_model_autocomplete.html.twig' %}
+
+{% block sonata_type_model_autocomplete_ajax_request_parameters %}
+    var dependencies = {
+    {% for dependent_id, drelation in dependencies %}
+        '{{ drelation }}': $('body').find("[data-dependent-id='{{ dependent_id }}']").val(),
+    {% endfor %}
+    };
+
+    var ret = {
+        //search term
+        '{{ req_param_name_search }}': term,
+
+        // dependencies
+        'dependencies': dependencies,
+
+        // page size
+        '{{ req_param_name_items_per_page }}': {{ items_per_page }},
+
+        // page number
+        '{{ req_param_name_page_number }}': page,
+
+        // admin
+        {% if sonata_admin.admin is not null %}
+            'uniqid': '{{ sonata_admin.admin.uniqid }}',
+            'admin_code': '{{ sonata_admin.admin.code }}',
+        {% elseif admin_code %}
+            'admin_code':  '{{ admin_code }}',
+        {% endif %}
+
+        // subclass
+        {% if app.request.query.get('subclass') %}
+            'subclass': '{{ app.request.query.get('subclass') }}',
+        {% endif %}
+
+        {% if context == 'filter' %}
+            'field':  '{{ full_name|replace({'filter[': '', '][value]': '', '__':'.'}) }}',
+            '_context': 'filter'
+        {% else %}
+            'field':  '{{ name }}'
+        {% endif %}
+
+        // other parameters
+        {% if req_params is not empty %},
+            {%- for key, value in req_params -%}
+                '{{- key -}}': '{{- value -}}'
+                {%- if not loop.last -%}, {% endif -%}
+            {%- endfor -%}
+        {% endif %}
+    };
+
+    return ret;
+{% endblock %}

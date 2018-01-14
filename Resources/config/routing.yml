@@ -1,3 +1,0 @@
-localinks_dependent_auto_complete_homepage:
-    path:     /
-    defaults: { _controller: LocalinksDependentAutoCompleteBundle:Default:index }
