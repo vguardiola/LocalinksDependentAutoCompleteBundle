@@ -4,7 +4,7 @@ LocalinksDependentAutoCompleteBundle
 What for ?
 ==========
 
-LocalinksDependentAutoCompleteBundle allows, ub a Sonata Admin form, to filter the results of a "sonata_type_model_autocomplete" field using the value of one (or more) other field present in the same form.
+LocalinksDependentAutoCompleteBundle allows, in a Sonata Admin form, to filter the results of a "sonata_type_model_autocomplete" field using the value of one (or more) other field present in the same form.
 
 
 Installation
