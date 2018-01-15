@@ -11,7 +11,7 @@
   }],
   "keywords" : ["symfony", "sonata", "admin", "filter"],
   "autoload" : {
-    "psr-4" : {
+    "psr-0" : {
       "Localinks\\DependentAutoCompleteBundle" : ""
     }
   },
