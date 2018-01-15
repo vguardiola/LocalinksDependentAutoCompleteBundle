@@ -1,7 +1,7 @@
 {
   "name" : "localinks/dependentautocompletebundle",
   "description" : "Extends Sonata Autocomplete Form Type and filters results using other form fields values",
-  "licence" : "GNU GENERAL PUBLIC LICENSE 3",
+  "licence" : "GPL-3.0",
   "homepage": "https://github.com/localinks/LocalinksDependentAutoCompleteBundle",
   "type" : "symfony-bundle",
   "authors" : [{
