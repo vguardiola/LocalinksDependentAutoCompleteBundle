@@ -6,7 +6,7 @@
   "type" : "symfony-bundle",
   "authors" : [{
     "name" : "Mathieu HAUTENAUVE - Localinks",
-    "email" : "mathieu@proxymart.be",
+    "email" : "mathieu@localinks.be",
     "homepage": "http://www.localinks.be"
   }],
   "keywords" : ["symfony", "sonata", "admin", "filter"],
