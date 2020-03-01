@@ -26,7 +26,7 @@ class DependentAutoCompleteTypeExtension extends AbstractTypeExtension
         $resolver->setDefined(array('dependencies'));
 
         $resolver->setDefaults([
-            'template' => 'LocalinksDependentAutoCompleteBundle:Form:dependent_auto_complete_type.html.twig',
+            'template' => '@LocalinksDependentAutoComplete/Form/dependent_auto_complete_type.html.twig',
             'dependencies' => array()
         ]);
     }
